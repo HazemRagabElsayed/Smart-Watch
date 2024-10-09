@@ -2,7 +2,8 @@
  * ssd1306.h
  *
  * Created: 02/05/2024 03:57:19 ص
- *  Author: FREINDS
+ *  Author: osc
+ Edited by : Hazem Ragab Elsayed
  */ 
 
 
@@ -48,10 +49,7 @@ void SendChar(unsigned char data);
 void displayOn(void);
 void displayOff(void);
 void clear_display(void);
-void printBigTime(char *string);
 void reset_display(void);
-void printBigNumber(char string, int X, int Y);
-void bmp(bitmap_t b);
 void setPageAddress();
 void setColAddress();
 

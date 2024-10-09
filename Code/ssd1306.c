@@ -2,7 +2,8 @@
  * ssd1306.c
  *
  * Created: 02/05/2024 03:57:45 ص
- *  Author: FREINDS
+ *  Author: osc
+ edited by : Hazem Ragab Elsayed
  */ 
 
 /*this modules purpose is to initiate and control the OLED display SSD1306 driver for the 128x64 OLED display
@@ -109,32 +110,10 @@ void  InitializeDisplay()
 //////////////////////////////
 //
 
-void bmp(bitmap_t b)
-{
-	int i,j;
-
-	ssd1306_command(0x00);
-	ssd1306_command(0x10);
-
-	ssd1306_command(0xB0);
-
-	for (j=0;j<8;j++)
-	{
-		for (i=0;i<128;i++)
-		ssd1306_command( b[j][i] );
-		ssd1306_command(0);
-		ssd1306_command(0);
-		ssd1306_command(0);
-		ssd1306_command(0);
-	}
-
-}
 void reset_display(void)
 {
 	displayOff();
 	clear_display();
-
-	
 	displayOn();
 }
 
